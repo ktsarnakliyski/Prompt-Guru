@@ -34,6 +34,6 @@ def read_root():
     return {"Hello": "World"}
 
 
-@app.get("/users/")
+@app.get("/prompts/")
 def read_all_users(db: Session = Depends(get_db)):
-    return db.query(models.User).all()
+    return db.query(models.Prompt).all()
